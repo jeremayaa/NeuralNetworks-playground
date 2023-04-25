@@ -1,10 +1,10 @@
 import numpy as np
 from Network import Network, to_categorical, sigmoid
 
-train_images = np.load('MNIST preprocessing/train_images.npy')
-train_labels = np.load('MNIST preprocessing/train_labels.npy')
-test_images = np.load('MNIST preprocessing/test_images.npy')
-test_labels = np.load('MNIST preprocessing/test_labels.npy')
+train_images = np.load('digit_recognition/MNIST preprocessing/train_images.npy')
+train_labels = np.load('digit_recognition/MNIST preprocessing/train_labels.npy')
+test_images = np.load('digit_recognition/MNIST preprocessing/test_images.npy')
+test_labels = np.load('digit_recognition/MNIST preprocessing/test_labels.npy')
 
 train_images = [np.reshape(x, (784, 1)) for x in train_images]
 train_labels = [to_categorical(y) for y in train_labels]

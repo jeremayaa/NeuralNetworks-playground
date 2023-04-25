@@ -3,14 +3,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # load the trained model
-model = load_model("keras-playground/Keras_model.h5")
+model = load_model("digit_recognition/keras-playground/Keras_model.h5")
 
 # load test images
-test_images = np.load('MNIST preprocessing/test_images.npy')
+test_images = np.load('digit_recognition/MNIST preprocessing/test_images.npy')
 test_images = test_images.reshape(-1, 784) / 255.0
 
 # load labels 
-test_labels = np.load('MNIST preprocessing/test_labels.npy')
+test_labels = np.load('digit_recognition/MNIST preprocessing/test_labels.npy')
 
 
 # make predictions on the test images

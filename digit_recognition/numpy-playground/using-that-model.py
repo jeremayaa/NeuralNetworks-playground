@@ -5,8 +5,8 @@ from Network import Network, to_categorical
 
 
 # load the model
-biases = np.load('numpy-playground/Network_biases.npy', allow_pickle=True)
-weights = np.load('numpy-playground/Network_weights.npy', allow_pickle=True)
+biases = np.load('digit_recognition/numpy-playground/Network_biases.npy', allow_pickle=True)
+weights = np.load('digit_recognition/numpy-playground/Network_weights.npy', allow_pickle=True)
 
 # initialize model
 net = Network([784, 30, 10])
@@ -14,9 +14,9 @@ net.biases = biases
 net.weights = weights
 
 # load test data
-test_images = np.load('MNIST preprocessing/test_images.npy')
+test_images = np.load('digit_recognition/MNIST preprocessing/test_images.npy')
 test_input = [np.reshape(x, (784, 1)) for x in test_images]
-test_labels = np.load('MNIST preprocessing/test_labels.npy')
+test_labels = np.load('digit_recognition/MNIST preprocessing/test_labels.npy')
 
 # evaluate model and print accuracy
 test_data = []

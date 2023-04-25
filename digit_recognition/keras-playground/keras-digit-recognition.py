@@ -8,10 +8,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the dataset
-train_images = np.load('MNIST preprocessing/train_images.npy')
-train_labels = np.load('MNIST preprocessing/train_labels.npy')
-test_images = np.load('MNIST preprocessing/test_images.npy')
-test_labels = np.load('MNIST preprocessing/test_labels.npy')
+train_images = np.load('digit_recognition/MNIST preprocessing/train_images.npy')
+train_labels = np.load('digit_recognition/MNIST preprocessing/train_labels.npy')
+test_images = np.load('digit_recognition/MNIST preprocessing/test_images.npy')
+test_labels = np.load('digit_recognition/MNIST preprocessing/test_labels.npy')
 
 # Neurons take values from 0 to 1 as an input
 train_images = train_images.reshape(-1, 784) / 255.0

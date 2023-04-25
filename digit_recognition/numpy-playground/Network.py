@@ -123,8 +123,8 @@ class Network(object):
 #Activation functions
 def sigmoid(z):
     """The sigmoid function."""
-    return 1.0/(1.0+np.exp(-z))
-    # return 0.5 * (1 + np.tanh(0.5*z))
+    # return 1.0/(1.0+np.exp(-z))
+    return 0.5 * (1 + np.tanh(0.5*z))
 
 def sigmoid_prime(z):
     """Derivative of the sigmoid function."""
