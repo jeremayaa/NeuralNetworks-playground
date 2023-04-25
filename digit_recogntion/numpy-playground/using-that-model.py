@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from Network import Network, vectorized_result
+from Network import Network, to_categorical
 
 
 # load the model
@@ -20,7 +20,7 @@ test_labels = np.load('MNIST preprocessing/test_labels.npy')
 
 # evaluate model and print accuracy
 test_data = []
-for i in zip([np.reshape(x, (784, 1)) for x in test_images], [vectorized_result(y) for y in test_labels]):
+for i in zip([np.reshape(x, (784, 1)) for x in test_images], [to_categorical(y) for y in test_labels]):
     test_data.append(i)
 print("Model accuracy: ", net.evaluate(test_data))
 
